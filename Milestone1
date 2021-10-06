@@ -64,6 +64,14 @@ def mendels_law(hom, het, rec):
   #print(total_allele)
   return (het_dominant+hom_dominant)/total_allele
 
-
+def gc_content(dna_list):
+    ans = []
+    for i in range(len(dna_list)):
+        ans.append(0)
+    for i in range(len(dna_list)):
+        for element in range(len(dna_list[i])):
+            if(dna_list[i][element] == "G" or dna_list[i][element] == "C"):
+                ans[i] += 1
+    return (ans.index(max(ans)), 100* max(ans) / len(dna_list[ans.index(max(ans))]))
 
 
