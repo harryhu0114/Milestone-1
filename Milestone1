@@ -64,6 +64,12 @@ def mendels_law(hom, het, rec):
   #print(total_allele)
   return (het_dominant+hom_dominant)/total_allele
 
+def fibonacci_rabbits(n, k):
+    f1, f2 = 1, 1
+    for i in range(0,4):
+        f1, f2 =  f1 + (f2 * k) 
+    print(f2)
+
 def gc_content(dna_list):
     ans = []
     for i in range(len(dna_list)):
@@ -75,10 +81,6 @@ def gc_content(dna_list):
     return (ans.index(max(ans)), 100* max(ans) / len(dna_list[ans.index(max(ans))]))
 
 def rna2codon(rna):
-    rna = ''
-    for i in range(0,len(rna),n_1):
-        v = 3
-    triplet = rna[i:i+n_1]
     genetic_code = {
         'UUU': 'F', 'UUC': 'F', 'UUA': 'L', 'UUG': 'L',        'CUU': 'L', 'CUC': 'L', 'CUA': 'L', 'CUG': 'L',
         'AUU': 'I', 'AUC': 'I', 'AUA': 'I', 'AUG': 'M',        'GUU': 'V', 'GUC': 'V', 'GUA': 'V', 'GUG': 'V',
@@ -93,6 +95,9 @@ def rna2codon(rna):
         'AGU': 'S', 'AGC': 'S', 'AGA': 'R', 'AGG': 'R',        'GGU': 'G', 'GGC': 'G', 'GGA': 'G', 'GGG': 'G',
     }
     allowed_codons = set('ACGU')
+    rna = ''
+    for i in range(0,len(rna),3):
+      triplet = rna[i:i+3]
 
     if triplet in genetic_code:
         return genetic_code[triplet]
@@ -103,4 +108,11 @@ def rna2codon(rna):
      out = rna2codon(inp)
      ans += out
     return ans
+    
+def locate_substring(dna_snippet, dna): 
+   start = 0
+   for i in range(len(dna)):
+   if start = dna.find(dna_snippet):
+    start +=1
+   
 
