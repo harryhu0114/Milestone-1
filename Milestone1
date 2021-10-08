@@ -119,7 +119,7 @@ def locate_substring(dna_snippet, dna):
 
 def hamming_dist(dna1,dna2):
     count = 0
-    for i in range(len(dna(1)):
+    for i in range(len(dna1):
       if dna1[i] != dna2[i]:
         count += 1
       else:
@@ -154,6 +154,21 @@ def source_rna(protein):
         'UGU': 'C', 'UGC': 'C', 'UGA': '*', 'UGG': 'W',        'CGU': 'R', 'CGC': 'R', 'CGA': 'R', 'CGG': 'R',
         'AGU': 'S', 'AGC': 'S', 'AGA': 'R', 'AGG': 'R',        'GGU': 'G', 'GGC': 'G', 'GGA': 'G', 'GGG': 'G',
     }
+  count = 0
+  val = ''
+  var = val*num
+  ans = ""
+  for i in range(0,len(protein),3):
+    triplet = protein[i:i+3]
+    if triplet in genetic_code:
+      ans += genetic_code[triplet]
+  if val = genetic code:
+    count += 1
+  elif val = genetic code:
+    count = count*var
+  else:
+    count += 0
+  return count
 
 def splice_rna(dna, intron_list):
   dna = ''
