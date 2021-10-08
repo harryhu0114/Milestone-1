@@ -1,19 +1,19 @@
 def s(dna):
-  count={}
-  for c in dna:
-    count[c]=count.setdefault(c, 0)+1
-  return count
+    count={}
+    for c in dna:
+        count[c]=count.setdefault(c, 0)+1
+    return count
 
 
 
 def dna2rna(dna):
-  rna=""
-  for symbol in dna:
-    if symbol is "T":
-      rna=rna+"U"
-    else:
-      rna=rna+symbol
-  return rna
+    rna=""
+    for symbol in dna:
+        if symbol == "T":
+            rna=rna+"U"
+        else:
+            rna=rna+symbol
+        return rna
 
 
 def reverse_complement(dna):
