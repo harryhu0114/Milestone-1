@@ -17,22 +17,22 @@ def dna2rna(dna):
 
 
 def reverse_complement(dna):
-  x=dna[::-1]
-  reverse=''
-  for symbol in x:
-      if symbol == 'A':
-          reverse=reverse+'T'
-      elif symbol == 'T':
-          reverse=reverse+'A'
-      elif symbol== 'C':
-          reverse=reverse+'G'
-      elif symbol== 'G':
-          reverse=reverse+'C'
-      elif symbol== 'U':
-          reverse=reverse+'A'
-      else:
-        reverse=reverse+symbol
-  return reverse
+    x=dna[::-1]
+    reverse=''
+    for symbol in x:
+        if symbol == 'A':
+            reverse=reverse+'T'
+        elif symbol == 'T':
+            reverse=reverse+'A'
+        elif symbol== 'C':
+            reverse=reverse+'G'
+        elif symbol== 'G':
+            reverse=reverse+'C'
+        elif symbol== 'U':
+            reverse=reverse+'A'
+        else:
+            reverse=reverse+symbol
+            return reverse
 
 def mendels_law(hom, het, rec):
   total=hom+het+rec
