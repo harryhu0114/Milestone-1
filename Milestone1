@@ -156,7 +156,7 @@ def source_rna(protein):
     }
 
 def splice_rna(dna, intron_list):
-  dna = 'AGTCGTA'
+  dna = ''
   intron_list = dna.split[:T]
   dna = dna - intron_list
   rna = ''
