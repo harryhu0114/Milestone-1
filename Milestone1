@@ -64,11 +64,14 @@ def mendels_law(hom, het, rec):
   #print(total_allele)
   return (het_dominant+hom_dominant)/total_allele
 
-def fibonacci_rabbits(n, k):
-    f1, f2 = 1, 1
-    for i in range(0,4):
-        f1, f2 =  f1 + (f2 * k) 
-    print(f2)
+def fibonacci_rabbits(n,k):
+    f1 = 1 # babby rabbits
+    f2 = 1 # adult rabbits
+    for i in range(n-1):
+        temp = f1
+        f1 = (f2 * k) + f1
+        f2 = temp
+    print (f2)
 
 def gc_content(dna_list):
     ans = []
