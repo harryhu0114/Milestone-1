@@ -111,9 +111,9 @@ def rna2codon(rna):
     return ans
     
 def locate_substring(dna_snippet, dna): 
-   start = 0
-   for i in range(len(dna)):
-   if start = dna.find(dna_snippet):
-    start +=1
-   
+    ans = []
+    for i in range(len(dna)):
+        if dna.startswith(dna_snippet,i):
+            ans.append(i)
+    return ans
 
